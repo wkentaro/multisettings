@@ -37,6 +37,8 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: POSIX',
         'Topic :: Internet :: WWW/HTTP',
-        ],
-    entry_points={'console_scripts': ['multisettings=multisettings:main']},
+    ],
+    entry_points={
+        'console_scripts': ['multisettings=multisettings:main'],
+    },
 )
