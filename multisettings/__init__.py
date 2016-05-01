@@ -1,14 +1,15 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import argparse
 import ConfigParser
 import os
+import pkg_resources
 import shutil
 import yaml
 
 
-__version__ = '0.0.2'
+__author__ = 'Kentaro Wada <www.kentaro.wada@gmail.com>'
+__version__ = pkg_resources.get_distribution('multisettings').version
 
 
 def main():

@@ -1,24 +1,26 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
+
 from __future__ import print_function
 import sys
 import subprocess
 from setuptools import setup, find_packages
 
 
+version = '1.0.0'
+
+
 # publish helper
 if sys.argv[-1] == 'publish':
     for cmd in [
             'python setup.py sdist upload',
-            'git tag {0}'.format(__import__('multisettings').__version__),
+            'git tag {0}'.format(version),
             'git push origin master --tag']:
         subprocess.check_call(cmd, shell=True)
     sys.exit(0)
 
 setup(
     name='multisettings',
-    version=__import__('multisettings').__version__,
+    version=version,
     packages=find_packages(),
     description=('Tool to handle multiple settings for editor, '
                  'shell and other command line tools.'),
